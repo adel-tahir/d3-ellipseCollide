@@ -32,11 +32,11 @@ var forceCollide = ellipseCollision.ellipseCollide()
 
 var force = d3.forceSimulation()
     .nodes(nodes)
-    // .force("center", d3.forceCenter())
+    .force("center", d3.forceCenter())
     .force("collide", forceCollide)
     //.force("gravity", d3.forceManyBody(30))
-    //.force("x", d3.forceX().strength(.7))
-    //.force("y", d3.forceY().strength(.7))
+    .force("x", d3.forceX().strength(.05))
+    .force("y", d3.forceY().strength(.05))
     .on("tick", tick);
 
 var svg = d3.select("body").append("svg")
