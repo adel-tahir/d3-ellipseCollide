@@ -45,17 +45,7 @@ The `ellipseCollide()` method is available in the global `ellipseCollision` name
 
 ```
 d3.forceSimulation
-	.force('collide', ellipseCollide()
-	.radius(function(d) { return [d.rx, d.ry]; }));
-```
-
-### Using the module
-
-Add an `'collide'` force just like you would any other D3 force module:
-
-```
-d3.forceSimulation()
-	.force('collide', ellipseCollide()
+	.force('collide', ellipseCollision.ellipseCollide()
 	.radius(function(d) { return [d.rx, d.ry]; }));
 ```
 
