@@ -36,7 +36,7 @@ import { ellipseCollide } from './d3-ellipse-collision'
 // ...
 d3.forceSimulation
 	.force('collide', ellipseCollide()
-										.radius(function(d) { return [d.rx, d.ry]; }));
+	.radius(function(d) { return [d.rx, d.ry]; }));
 ```
 
 #### via `<script>` or CDN ([UNPKG](https://unpkg.com/))
@@ -46,7 +46,7 @@ The `ellipseCollide()` method is available in the global `ellipseCollision` name
 ```
 d3.forceSimulation
 	.force('collide', ellipseCollide()
-										.radius(function(d) { return [d.rx, d.ry]; }));
+	.radius(function(d) { return [d.rx, d.ry]; }));
 ```
 
 ### Using the module
@@ -56,7 +56,7 @@ Add an `'collide'` force just like you would any other D3 force module:
 ```
 d3.forceSimulation()
 	.force('collide', ellipseCollide()
-										.radius(function(d) { return [d.rx, d.ry]; }));
+	.radius(function(d) { return [d.rx, d.ry]; }));
 ```
 
 
@@ -72,13 +72,13 @@ Assigns the array of *nodes* to this force. This method is called when a force i
 
 If *radius* is specified, sets the radius accessor to the specified two-element array `[rx, ry]` or function, re-evaluates the radius accessor for each node, and returns this force. If *radius* is not specified, returns the current radius accessor, which is specified in `ellipseCollide(radius)` function.
 
-The radius accessor is invoked for each node in the simulation, being passed the node, its zero-based index, and the array of all nodes (the standard D3 format of `(d, i, nodes)`). The resulting ⟨*rx*, *ry*⟩ is then stored internally.
+The radius accessor is invoked for each node in the simulation, being passed the node, its zero-based index, and the array of all nodes (the standard D3 format of `(d, i, nodes)`). The resulting `[rx, ry]` is then stored internally.
 
 <a name="ellipseCollide_strength" href="#ellipseCollide_strength">#</a> <i>ellipseCollide</i>.<b>strength</b>([<i>strength</i>])
 
 If *strength* is specified, sets the force strength to the specified number in the range [0,1] and returns this force. If *strength* is not specified, returns the current strength, which defaults to 0.1.
 
-*Not yet implemented*
+**Not yet implemented*
 
 
 ## Building and testing
